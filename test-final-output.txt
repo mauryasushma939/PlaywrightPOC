@@ -1,0 +1,15 @@
+
+> playwrightlearning@1.0.0 test
+> npx playwright test
+
+
+Running 4 tests using 1 worker
+
+  ✓  1 [chromium] › test/tests/OperationWebElements.spec.ts:4:5 › has title @smock (156ms)
+  ✓  2 [chromium] › test/tests/OperationWebElements.spec.ts:24:5 › Test Authentication (29ms)
+Product Price:  $29.99
+Price of Sauce Labs Backpack: $29.99
+  ✓  3 [chromium] › test/tests/OrderProducts.spec.ts:18:9 › Order First Products Tests › Verify  product Price of Sauce Labs Backpack (1.2s)
+  ✓  4 [chromium] › test/tests/UserLogin.spec.ts:17:9 › User Login Tests › Successful Login with Valid Credentials (666ms)
+
+  4 passed (3.2s)
