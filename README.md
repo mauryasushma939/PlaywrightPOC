@@ -81,10 +81,48 @@ PlaywrightPOC/
 
 ## 📊 Test Reports
 
-After running tests, you can find:
-- **HTML Report**: `playwright-report/index.html`
-- **Test Results**: `test-results/` directory
-- **Allure Results**: `allure-results/` directory
+### Quick Start - Generate and Download Reports
+
+```bash
+# 1. Run all tests
+npm test
+
+# 2. Package reports for download
+npm run reports:package
+
+# 3. View reports
+npm run test:report        # Open Playwright HTML report
+npm run reports:serve      # Serve reports on localhost:9323
+```
+
+### Available Report Formats
+
+After running tests, you can access:
+- **Playwright HTML Report**: `playwright-report/index.html` - Interactive report with screenshots and videos
+- **JSON Report**: `test-results/test-results.json` - Structured data for programmatic access
+- **Allure Results**: `allure-results/` - Raw data for Allure reports
+- **Downloadable Reports**: `downloadable-reports/` - Packaged ZIP files ready for download
+
+### Download Options
+
+All reports are automatically packaged in the `downloadable-reports/` directory:
+- `playwright-html-report-[timestamp].zip` - Complete HTML report (~180 KB)
+- `allure-html-report-[timestamp].zip` - Allure report data (~1 MB)
+- `test-results-[timestamp].json` - Test results JSON (~11 KB)
+- `report-summary-[timestamp].txt` - Quick summary
+
+### Report Scripts
+
+```bash
+npm test                     # Run all tests and generate reports
+npm run test:report          # View Playwright HTML report in browser
+npm run reports:serve        # Serve reports on http://localhost:9323
+npm run reports:package      # Package all reports for download
+npm run allure:generate      # Generate Allure HTML report (requires Allure CLI)
+npm run allure:open          # Open Allure report
+```
+
+📖 **For detailed report documentation**, see [TEST_REPORTS_GUIDE.md](TEST_REPORTS_GUIDE.md)
 
 ## 🔧 Configuration
 

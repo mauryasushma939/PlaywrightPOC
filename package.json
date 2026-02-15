@@ -8,8 +8,13 @@
     "test:ui": "npx playwright test --ui",
     "test:debug": "npx playwright test --debug",
     "test:report": "npx playwright show-report",
+    "test:report:serve": "npx http-server playwright-report -p 9323 -o",
     "allure:generate": "allure generate allure-results --clean -o allure-report",
-    "allure:open": "allure open allure-report"
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "reports:generate-all": "npm run allure:generate",
+    "reports:package": "node scripts/package-reports.js",
+    "reports:serve": "npm run test:report:serve"
   },
   "keywords": [],
   "author": "",

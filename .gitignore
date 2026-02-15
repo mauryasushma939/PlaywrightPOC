@@ -10,6 +10,9 @@ playwright-report/
 allure-results/
 allure-report/
 
+# Downloadable reports
+downloadable-reports/
+
 # OS files
 .DS_Store
 Thumbs.db
