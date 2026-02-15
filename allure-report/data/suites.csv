@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3741","Successful Login with Valid Credentials","chromium","Tue Sep 09 21:34:44 IST 2025","passed","Tue Sep 09 21:34:48 IST 2025","User Login Tests","UserLogin.spec.ts","",""
+"","26","Test Reports","chromium","Tue Sep 09 21:34:44 IST 2025","passed","Tue Sep 09 21:34:44 IST 2025","","OperationWebElements.spec.ts","",""
+"","3059","Verify product Price of Sauce Labs Backpack","chromium","Tue Sep 09 21:34:44 IST 2025","passed","Tue Sep 09 21:34:47 IST 2025","Order First Products Tests","OrderProducts.spec.ts","",""
+"","1347","has title @smock","chromium","Tue Sep 09 21:34:44 IST 2025","passed","Tue Sep 09 21:34:45 IST 2025","","OperationWebElements.spec.ts","",""
+"","35121","test","chromium","Sat Sep 06 18:17:45 IST 2025","broken","Sat Sep 06 18:18:20 IST 2025","","OperationWebElements.spec.ts","",""
