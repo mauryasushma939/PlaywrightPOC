@@ -24,13 +24,15 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['list'],
+    ['html', { open: 'never', outputFolder: 'playwright-report' }], // HTML report
+    ['json', { outputFile: 'test-results/test-results.json' }], // JSON report for download
     ['allure-playwright'], // Enable Allure reporter
     ],
 
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     trace: 'on-first-retry',
-    headless: false,
+    headless: true, // Changed to true for CI/headless environments
     video: 'on-first-retry',
     screenshot: 'only-on-failure',
     actionTimeout: 0,
@@ -47,5 +49,13 @@ export default defineConfig({
     },
 
   ],
+
+  /* Web server for mock pages - run local server to avoid external network dependencies */
+  webServer: {
+    command: 'npx http-server test/mock-pages -p 8080 -c-1',
+    port: 8080,
+    timeout: 120 * 1000,
+    reuseExistingServer: !process.env.CI,
+  },
 
 });
