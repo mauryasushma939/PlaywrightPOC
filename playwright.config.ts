@@ -48,4 +48,12 @@ export default defineConfig({
 
   ],
 
+  /* Web server for mock pages - run local server to avoid external network dependencies */
+  webServer: {
+    command: 'npx http-server test/mock-pages -p 8080 -c-1',
+    port: 8080,
+    timeout: 120 * 1000,
+    reuseExistingServer: !process.env.CI,
+  },
+
 });
