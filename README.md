@@ -31,7 +31,7 @@ schedule:
 
 **Note**: GitHub Actions uses UTC timezone. To convert to your local timezone:
 - 8 AM UTC = 1:30 PM IST (India Standard Time)
-- 8 AM UTC = 12 AM PST (Pacific Standard Time)
-- 8 AM UTC = 3 AM EST (Eastern Standard Time)
+- 8 AM UTC = 12 AM PST (midnight Pacific Standard Time) / 1 AM PDT (Pacific Daylight Time)
+- 8 AM UTC = 3 AM EST (Eastern Standard Time) / 4 AM EDT (Eastern Daylight Time)
 
 To schedule for 8 AM IST, use: `cron: '30 2 * * *'` (2:30 AM UTC = 8 AM IST)
