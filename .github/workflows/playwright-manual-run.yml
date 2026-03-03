@@ -1,5 +1,4 @@
-# This workflow allows you to run Playwright tests in headless mode and generate an Allure report.
-name: Playwright Manual Run
+name: Run Playwright tests
 
 on:
   workflow_dispatch:
@@ -10,20 +9,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 'v20.15.1'
-
+          node-version: '14'
       - name: Install dependencies
         run: npm install
-
-      - name: Run Playwright tests in headless mode
-        run: |
-          npx playwright test --headed=true
-
-      - name: Generate Allure report
-        run: |
-          npx allure generate --clean --output allure-report
-          npx allure open allure-report
+      - name: Run Playwright tests
+        run: npx playwright test --headless
