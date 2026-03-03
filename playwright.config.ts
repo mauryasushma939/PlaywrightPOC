@@ -30,7 +30,7 @@ export default defineConfig({
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     trace: 'on-first-retry',
-    headless: false,
+    headless: true,
     video: 'on-first-retry',
     screenshot: 'only-on-failure',
     actionTimeout: 0,
