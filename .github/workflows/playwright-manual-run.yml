@@ -21,7 +21,7 @@ jobs:
 
       - name: Run Playwright tests in headless mode
         run: |
-          npx playwright test --headed=false
+          npx playwright test --headed=true
 
       - name: Generate Allure report
         run: |
